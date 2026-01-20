@@ -113,115 +113,39 @@
         .modal-header { font-family: 'Courier New', monospace; font-weight: bold; color: var(--dark-blue); font-size: 1.5rem; border-bottom: 2px dashed #ccc; padding-bottom: 10px; margin-bottom: 15px; }
         .modal-explanation { font-size: 1.1rem; line-height: 1.6; }
 
-        /* =========================================
-           TAB 4: DETECTOR GPS (VISUAL UPGRADE 🎨) 
-           ========================================= */
-        .gps-box { 
-            background: #ffffff; 
-            padding: 30px; 
-            border-radius: 25px; 
-            text-align: center; 
-            border: none;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .gps-step { 
-            display: none; 
-            animation: slideIn 0.4s ease-out; 
-        }
+        /* TAB 4: DETECTOR GPS */
+        .gps-box { background: #ffffff; padding: 30px; border-radius: 25px; text-align: center; border: none; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 800px; margin: 0 auto; }
+        .gps-step { display: none; animation: slideIn 0.4s ease-out; }
         .gps-step.active { display: block; }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .gps-question-title {
-            font-size: 1.8rem;
-            color: var(--dark-blue);
-            margin-bottom: 30px;
-        }
-
-        .gps-options-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .gps-card-btn {
-            background: var(--light-gray-bg);
-            border: 3px solid transparent;
-            border-radius: 20px;
-            padding: 25px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            flex: 1;
-            min-width: 200px;
-            max-width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .gps-card-btn:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            border-color: var(--primary);
-        }
-
-        .gps-icon-big {
-            font-size: 4rem;
-            display: block;
-            filter: drop-shadow(0 4px 2px rgba(0,0,0,0.1));
-        }
-
-        .gps-text {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--text-color);
-        }
-
-        .result-badge {
-            padding: 40px;
-            border-radius: 20px;
-            color: white;
-            margin-top: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .gps-question-title { font-size: 1.8rem; color: var(--dark-blue); margin-bottom: 30px; }
+        .gps-options-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .gps-card-btn { background: var(--light-gray-bg); border: 3px solid transparent; border-radius: 20px; padding: 25px; cursor: pointer; transition: all 0.3s; flex: 1; min-width: 200px; max-width: 300px; display: flex; flex-direction: column; align-items: center; gap: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .gps-card-btn:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 15px 30px rgba(0,0,0,0.15); border-color: var(--primary); }
+        .gps-icon-big { font-size: 4rem; display: block; filter: drop-shadow(0 4px 2px rgba(0,0,0,0.1)); }
+        .gps-text { font-size: 1.1rem; font-weight: bold; color: var(--text-color); }
+        .result-badge { padding: 40px; border-radius: 20px; color: white; margin-top: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
         .res-green { background: linear-gradient(135deg, #28a745, #218838); }
         .res-orange { background: linear-gradient(135deg, #fd7e14, #e67e22); }
         .res-icon { font-size: 5rem; display: block; margin-bottom: 10px; }
-
         .btn-yes:hover { border-color: var(--green); background: #e8f5e9; }
         .btn-no:hover { border-color: var(--orange); background: #fff3e0; }
 
-        /* =========================================
-           TAB 5 & 6: PRACTICE & FLASHCARDS
-           ========================================= */
+        /* TAB 5 & 6: PRACTICE & FLASHCARDS */
         .quiz-container { margin-bottom: 30px; }
         .quiz-question { background: var(--container-bg); padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid var(--purple); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .quiz-options button { display: block; width: 100%; padding: 10px; margin: 5px 0; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); cursor: pointer; text-align: left; }
         .quiz-options button:hover { background: #e9ecef; }
         .quiz-options button.correct { background: #d4edda; border-color: var(--green); }
         .quiz-options button.wrong { background: #f8d7da; border-color: var(--red); }
-
         .story-container { background: #fffcf5; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #e0d0b0; line-height: 1.8; }
         body.dark-mode .story-container { background: #2a2a2a; border-color: #444; }
         select.story-input { border: none; border-bottom: 2px solid var(--primary); background: transparent; color: var(--text-color); font-weight: bold; padding: 0 5px; cursor: pointer; }
-
         .sorter-area { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
         .drop-zone { flex: 1; min-width: 250px; min-height: 300px; background: rgba(0,0,0,0.03); border: 2px dashed #aaa; border-radius: 15px; padding: 15px; }
         .draggable-source { display: flex; flex-wrap: wrap; gap: 8px; padding: 15px; background: var(--light-gray-bg); border-radius: 15px; min-height: 80px; margin-bottom: 15px; }
         .drag-item { background: white; padding: 8px 15px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: grab; font-size: 0.9rem; border: 1px solid var(--border-color); }
-
         .fc-scene { perspective: 1000px; width: 100%; max-width: 500px; height: 300px; margin: 20px auto; cursor: pointer; }
         .fc-card { width: 100%; height: 100%; position: relative; transition: transform 0.6s; transform-style: preserve-3d; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
         .fc-card.is-flipped { transform: rotateY(180deg); }
@@ -233,14 +157,9 @@
         .btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .btn:hover { transform: translateY(-2px); }
         .hidden { display: none; }
-
         #floating-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; overflow: hidden; }
         .floater { position: absolute; font-size: 2.5rem; opacity: 0.15; animation: floatUp 25s linear infinite; }
-        @keyframes floatUp {
-            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.2; }
-            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
-        }
+        @keyframes floatUp { 0% { transform: translateY(110vh) rotate(0deg); opacity: 0; } 10% { opacity: 0.2; } 100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; } }
     </style>
 </head>
 <body>
@@ -454,7 +373,7 @@
             es: {
                 title: "Master de Reciprocidad 🤝", subtitle: "La guía definitiva: Reflexivos vs. Recíprocos", tab_concept: "Concepto", tab_formula: "Fórmula",
                 tab_phrases: "Frases", tab_detector: "Detector", tab_practice: "Práctica", tab_flashcards: "Flashcards",
-                h_metaphor: "La Metáfora Visual", reflexive: "Reflexivo", reciprocal: "Recíproco", 
+                h_metaphor: "La Metáfora Visual", reflexive: "Reflexivo", reciprocal: "Recíproco", ambiguous: "Ambiguo",
                 ref_desc: "La acción vuelve a mí mismo. Como un boomerang.", rec_desc: "La acción se cruza entre dos o más personas.",
                 h_video: "Tutoriales Interactivos", 
                 vis_title: "🧙‍♂️ Creador de Reciprocidad", vis_desc: "Haz clic en los botones para construir situaciones recíprocas.", vis_choose: "Elige el Sujeto:",
@@ -464,7 +383,7 @@
                 tip_title: "💡 El Truco Maestro", tip_desc: "Para saber si es RECÍPROCO, intenta añadir al final: <b>'el uno al otro'</b> (o 'mutuamente'). Si tiene sentido, ¡es recíproco!", hear_trick: "🔊 Escuchar Truco",
                 h_examples: "Ejemplos Clave", phrases_sub: "Haz clic en 'Explicar' para ver detalles.", 
                 
-                // --- DETECTOR GPS (COMPLETO) ---
+                // --- DETECTOR GPS ---
                 h_detector: "El Detector GPS 🕵️", gps_q1: "¿Cuántas personas realizan la acción?",
                 gps_opt_one: "Solo una persona<br><small>(Yo, Él, Ella...)</small>", 
                 gps_opt_many: "Dos o más personas<br><small>(Nosotros, Ellos...)</small>",
@@ -483,12 +402,13 @@
                 
                 h_quiz: "Parte 1: Quiz Rápido", h_stories: "Parte 2: Historias", check_stories: "Comprobar Historias",
                 h_sorter: "Parte 3: Clasificador", check_sort: "Comprobar Clasificación",
-                h_flashcards: "Tarjetas de Práctica", tap_flip: "(Toca para girar)", close: "Cerrar", explain: "Explicar"
+                h_flashcards: "Tarjetas de Práctica", tap_flip: "(Toca para girar)", close: "Cerrar", explain: "Explicar",
+                trans_label: "Traducción:", type_label: "Tipo:"
             },
             en: {
                 title: "Reciprocity Master 🤝", subtitle: "The Ultimate Guide: Reflexive vs. Reciprocal", tab_concept: "Concept", tab_formula: "Formula",
                 tab_phrases: "Phrases", tab_detector: "Detector", tab_practice: "Practice", tab_flashcards: "Flashcards",
-                h_metaphor: "Visual Metaphor", reflexive: "Reflexive", reciprocal: "Reciprocal",
+                h_metaphor: "Visual Metaphor", reflexive: "Reflexive", reciprocal: "Reciprocal", ambiguous: "Ambiguous",
                 ref_desc: "Action returns to self. Like a boomerang.", rec_desc: "Action crosses between two or more people.",
                 h_video: "Interactive Tutorials", 
                 vis_title: "🧙‍♂️ Reciprocity Builder", vis_desc: "Click buttons to build reciprocal situations.", vis_choose: "Choose Subject:",
@@ -498,7 +418,7 @@
                 tip_title: "💡 The Magic Trick", tip_desc: "To know if it's RECIPROCAL, try adding: <b>'each other'</b>. If it makes sense, it's reciprocal!", hear_trick: "🔊 Hear Trick",
                 h_examples: "Key Examples", phrases_sub: "Click 'Explain' for details.", 
                 
-                // --- DETECTOR GPS (COMPLETE) ---
+                // --- DETECTOR GPS ---
                 h_detector: "GPS Detector 🕵️", gps_q1: "How many people are acting?",
                 gps_opt_one: "Only one person<br><small>(Me, He, She...)</small>", 
                 gps_opt_many: "Two or more people<br><small>(We, They...)</small>", 
@@ -517,11 +437,13 @@
                 
                 h_quiz: "Part 1: Quick Quiz", h_stories: "Part 2: Stories", check_stories: "Check Stories",
                 h_sorter: "Part 3: Sorter", check_sort: "Check Classification",
-                h_flashcards: "Practice Cards", tap_flip: "(Tap to flip)", close: "Close", explain: "Explain"
+                h_flashcards: "Practice Cards", tap_flip: "(Tap to flip)", close: "Close", explain: "Explain",
+                trans_label: "Translation:", type_label: "Type:"
             }
         };
 
         let currentLang = 'es';
+        let currentPhraseIndex = null; // NUEVO: Para saber qué modal está abierto
 
         // --- AUDIO SYSTEM ---
         function speakPremium(text) {
@@ -537,14 +459,38 @@
             window.speechSynthesis.speak(utterance);
         }
 
-        // --- CONTENT DATA ---
+        // --- CONTENT DATA (ACTUALIZADO CON detail_en) ---
         const phrasesData = [
-            { es: "Nos abrazamos", en: "We hug each other", type: "reciprocal", icon: "🫂", detail: "Verbo: Abrazar. Sujeto: Nosotros. Al ser 'nosotros', la acción es mutua. A abraza a B y B abraza a A." },
-            { es: "Me lavo las manos", en: "I wash my hands", type: "reflexive", icon: "🧼", detail: "Verbo: Lavar. Sujeto: Yo. La acción no sale a otra persona, vuelve a mi propio cuerpo." },
-            { es: "Se besan", en: "They kiss each other", type: "reciprocal", icon: "💋", detail: "Verbo: Besar. Sujeto: Ellos. Contexto romántico mutuo." },
-            { es: "Te peinas", en: "You comb your hair", type: "reflexive", icon: "🪮", detail: "Acción de cuidado personal (Grooming) suele ser reflexiva." },
-            { es: "Se escriben", en: "They write to each other", type: "reciprocal", icon: "✉️", detail: "Comunicación bidireccional. Él escribe a ella, ella escribe a él." },
-            { es: "Nos miramos", en: "We look at ourselves/each other", type: "ambiguous", icon: "👀", detail: "¡Cuidado! Puede ser 'nos miramos al espejo' (Reflexivo) o 'nos miramos a los ojos' (Recíproco). El contexto manda." }
+            { 
+                es: "Nos abrazamos", en: "We hug each other", type: "reciprocal", icon: "🫂", 
+                detail: "Verbo: Abrazar. Sujeto: Nosotros. Al ser 'nosotros', la acción es mutua. A abraza a B y B abraza a A.",
+                detail_en: "Verb: To Hug. Subject: We. Since it is 'us', the action is mutual. A hugs B and B hugs A."
+            },
+            { 
+                es: "Me lavo las manos", en: "I wash my hands", type: "reflexive", icon: "🧼", 
+                detail: "Verbo: Lavar. Sujeto: Yo. La acción no sale a otra persona, vuelve a mi propio cuerpo.",
+                detail_en: "Verb: To Wash. Subject: I. The action does not go to another person, it returns to my own body."
+            },
+            { 
+                es: "Se besan", en: "They kiss each other", type: "reciprocal", icon: "💋", 
+                detail: "Verbo: Besar. Sujeto: Ellos. Contexto romántico mutuo.",
+                detail_en: "Verb: To Kiss. Subject: They. Mutual romantic context."
+            },
+            { 
+                es: "Te peinas", en: "You comb your hair", type: "reflexive", icon: "🪮", 
+                detail: "Acción de cuidado personal (Grooming) suele ser reflexiva.",
+                detail_en: "Personal care action (Grooming) is usually reflexive."
+            },
+            { 
+                es: "Se escriben", en: "They write to each other", type: "reciprocal", icon: "✉️", 
+                detail: "Comunicación bidireccional. Él escribe a ella, ella escribe a él.",
+                detail_en: "Two-way communication. He writes to her, she writes to him."
+            },
+            { 
+                es: "Nos miramos", en: "We look at ourselves/each other", type: "ambiguous", icon: "👀", 
+                detail: "¡Cuidado! Puede ser 'nos miramos al espejo' (Reflexivo) o 'nos miramos a los ojos' (Recíproco). El contexto manda.",
+                detail_en: "Careful! It could be 'we look at ourselves in the mirror' (Reflexive) or 'we look into each other's eyes' (Reciprocal). Context rules."
+            }
         ];
 
         const quizData = [
@@ -597,7 +543,7 @@
             loadFlashcard(0);
         };
 
-        // --- GLOBAL UI (TRANSLATION LOGIC) ---
+        // --- GLOBAL UI (TRANSLATION LOGIC MEJORADA) ---
         function toggleLang() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             
@@ -610,8 +556,14 @@
             });
 
             // 2. Dynamic Elements Refresh
-            loadPhrases(); // Re-render phrases to update buttons
-            loadFlashcard(fcIndex); // Re-render current flashcard
+            loadPhrases(); // Recarga los botones "Explicar" en el nuevo idioma
+            loadFlashcard(fcIndex); 
+
+            // 3. NUEVO: Si el modal está abierto, actualízalo en vivo
+            const modal = document.getElementById('modal-global');
+            if (modal.style.display === 'flex' && currentPhraseIndex !== null) {
+                openPhraseModal(currentPhraseIndex);
+            }
         }
 
         function toggleTheme() { document.body.classList.toggle('dark-mode'); }
@@ -657,15 +609,16 @@
             }, 100);
         }
 
-        // --- PHRASES ---
+        // --- PHRASES (MODAL MEJORADO) ---
         function loadPhrases() {
             const container = document.getElementById('phrases-container');
             container.innerHTML = '';
             phrasesData.forEach((p, index) => {
                 let div = document.createElement('div');
-                div.className = `phrase-card ${p.type === 'reflexive' ? 'reflexive' : 'reciprocal'}`;
-                // Button text translation
-                const btnText = currentLang === 'es' ? 'Explicar' : 'Explain';
+                div.className = `phrase-card ${p.type === 'reflexive' ? 'reflexive' : (p.type === 'ambiguous' ? '' : 'reciprocal')}`;
+                if(p.type === 'ambiguous') div.style.borderLeftColor = "#999";
+                
+                const btnText = langData[currentLang].explain;
                 div.innerHTML = `
                     <div class="p-icon">${p.icon}</div>
                     <div class="p-text">${p.es}</div>
@@ -676,13 +629,36 @@
                 container.appendChild(div);
             });
         }
+
         function openPhraseModal(idx) {
+            currentPhraseIndex = idx; // Guardar índice para traducción en vivo
             const p = phrasesData[idx];
-            document.getElementById('m-header').innerText = p.es.toUpperCase();
-            document.getElementById('m-body').innerHTML = `<p><b>Translation:</b> ${p.en}</p><p><b>Type:</b> ${p.type.toUpperCase()}</p><hr><p>${p.detail}</p>`;
+            const isEs = currentLang === 'es';
+            
+            // Textos dinámicos según idioma
+            const title = isEs ? p.es.toUpperCase() : p.en.toUpperCase();
+            const transLabel = langData[currentLang].trans_label;
+            const typeLabel = langData[currentLang].type_label;
+            const transText = isEs ? p.en : p.es;
+            const typeText = langData[currentLang][p.type] || p.type.toUpperCase();
+            const detailText = isEs ? p.detail : p.detail_en; // Elegir detalle correcto
+
+            document.getElementById('m-header').innerText = title;
+            document.getElementById('m-body').innerHTML = `
+                <p><b>${transLabel}</b> ${transText}</p>
+                <p><b>${typeLabel}</b> ${typeText}</p>
+                <hr>
+                <p style="font-size:1.1rem; line-height:1.6;">${detailText}</p>
+            `;
             document.getElementById('modal-global').style.display = 'flex';
         }
-        function closeModal(e) { if(e.target.id === 'modal-global') e.target.style.display = 'none'; }
+
+        function closeModal(e) { 
+            if(e.target.id === 'modal-global' || e.target.getAttribute('data-key') === 'close') {
+                document.getElementById('modal-global').style.display = 'none';
+                currentPhraseIndex = null; // Limpiar índice
+            }
+        }
 
         // --- GPS LOGIC ---
         function gpsNext(step, val) {
@@ -769,12 +745,7 @@
         let fcIndex = 0;
         function loadFlashcard(idx) {
             const d = flashcardsData[idx];
-            // Si estamos en español, mostramos Inglés primero (reto) -> Español (solución)
-            // Si estamos en inglés, mostramos Español primero (reto) -> Inglés (solución)
-            
-            // FRENTE (Pregunta/Reto)
             const frontText = currentLang === 'es' ? d.en : d.es;
-            // DORSO (Respuesta/Solución)
             const backText = currentLang === 'es' ? d.es : d.en;
 
             document.getElementById('fc-front-text').innerText = frontText;
